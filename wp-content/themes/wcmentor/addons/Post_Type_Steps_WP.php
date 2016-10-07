@@ -80,7 +80,7 @@ class Post_Type_Steps_WP {
 				// $comment_ID
 				add_action( 'comment_post', [ $this, 'new_comment_notify' ], 10, 3 );
 
-				if ( function_exists('scporder_uninstall') ) {
+				if ( function_exists('scporder_uninstall') AND ! is_admin() ) {
 					add_filter( 'the_title', [ $this, 'prepend_index_count'], 10, 2 );
 				}
 
