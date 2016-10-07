@@ -12,5 +12,8 @@ Specs and tasks
 ChangeLog
 ====================
 
+### 10.06.16 - v-1.0.0 - randy-c-1.1
+- deploy test
+
 ### 10.06.16 - v-1.0.0 - randy-c-1.0
 - initial commit
