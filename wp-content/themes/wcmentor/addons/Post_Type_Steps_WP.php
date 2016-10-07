@@ -80,6 +80,10 @@ class Post_Type_Steps_WP {
 				// $comment_ID
 				add_action( 'comment_post', [ $this, 'new_comment_notify' ], 10, 3 );
 
+				if ( function_exists('scporder_uninstall') ) {
+					add_filter( 'the_title', [ $this, 'prepend_index_count'], 10, 2 );
+				}
+
 				add_filter( 'the_content', [ $this, 'append_content'] );
 				add_filter( 'post_class', [ $this, 'post_class'] );
 
@@ -166,7 +170,7 @@ class Post_Type_Steps_WP {
 				'custom-fields',
 				'comments',
 				'revisions',
-				// 'page-attributes', //  (menu order, hierarchical must be true to show Parent option)
+				'page-attributes', //  (menu order, hierarchical must be true to show Parent option)
 				'post-formats',
 			],
 
@@ -361,7 +365,7 @@ class Post_Type_Steps_WP {
 				$wp_query->get('post_type') == $this->post_type
 			)
 		) {
-			$wp_query->set( 'orderby', 'title' );
+			$wp_query->set( 'orderby', 'menu_order' );
 			$wp_query->set( 'order', 'ASC' );
 			$wp_query->set( 'posts_per_page', -1 );
 		}
@@ -432,6 +436,25 @@ class Post_Type_Steps_WP {
 		return $content;
 
 	} // end function append_content
+
+
+	/**
+	 * prepend_index_count
+	 **/
+	function prepend_index_count( $title, $id ) {
+		global $wp_query, $post;
+
+		if (
+			$post->ID == $id
+			AND $post->post_type == $this->post_type
+		) {
+			$index = $wp_query->current_post + 1;
+			$title = 'Step ' . $index . ': ' . $title;
+		}
+
+		return $title;
+
+	} // end function prepend_index_count
 
 
 	####################################################################################################
