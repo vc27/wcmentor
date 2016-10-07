@@ -1,0 +1,115 @@
+/*
+File Name comments.css
+License GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#################################################################################################### */
+
+#comments {
+	margin-top: 45px;
+	.comments-title {
+		margin: 0 0 7px;
+	}
+	.navigation {
+		display: block;
+		clear: both;
+		text-align: left;
+		padding: 3px 7px;
+	}
+	.prev-page {
+		padding-left: 7px;
+	}
+	.next-page {
+		padding-right: 7px;
+	}
+	.commentlist {
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
+		text-indent: 0;
+		li {
+			padding-bottom: 22px;
+			margin-bottom: 10px;
+			.vcard {
+				font-style: normal;
+				padding: 0 0 3px;
+				font-weight: 200;
+				font-size: 16px;
+				letter-spacing: 1px;
+			}
+			.avatar {
+				float: right;
+				margin: 0 0 1em 1em;
+			}
+			.comment-meta {
+				padding-bottom: 2px;
+			}
+			.comment-meta a {
+				font-size: 12px;
+			}
+			ul {
+				list-style: square;
+				margin: 0 0 1em 2em;
+			}
+			.reply {
+				text-align: right;
+			}
+			.reply a {
+				text-decoration: underline;
+				font-style: italic;
+				padding-left: 10px;
+			}
+			ul.children {
+				list-style: none;
+				margin: 10px 0 0;
+				text-indent: 0;
+				li {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+#respond {
+	#reply-title {
+		margin: 0 0 7px;
+	}
+	#respond-login {}
+	form {
+		.comments-cancel_reply {}
+		.comments-logged_in {}
+		.form-block {
+			padding-bottom: 7px;
+		}
+		label {
+			display: inline-block;
+			width: 20%;
+		}
+		.required {
+			width: 0;
+			display: none;
+		}
+		intput[type="text"] {
+			display: inline-block;
+			margin: 7px 0;
+			width: 40% !important;
+		}
+		textarea {}
+		.comment-notes,
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url,
+		.comment-form-comment {
+			padding-bottom: 7px;
+		}
+		.comment-form-url label {
+			display: inline-block;
+			width: 21%;
+		}
+		.button-submit {
+			margin-top: 7px;
+		}
+		.button-submit #button-submit_comments {}
+	}
+	/*end form*/
+}
+/*end #respond*/

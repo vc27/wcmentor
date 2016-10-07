@@ -1,0 +1,119 @@
+/*
+File Name mixins.css
+Package ParentTheme
+License GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#################################################################################################### */
+@mixin border-radius($radius:4px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin border-radius-top-left($radius:4px) {
+	border-top-left-radius: $radius;
+	-moz-border-radius-topleft: $radius;
+	-webkit-border-top-left-radius: $radius;
+	-o-border-top-left-radius: $radius;
+}
+@mixin border-radius-top-right($radius:4px) {
+	border-top-right-radius: $radius;
+	-moz-border-radius-topright: $radius;
+	-webkit-border-top-right-radius: $radius;
+	-o-border-top-right-radius: $radius;
+}
+@mixin border-radius-bottom-right($radius:4px) {
+	border-bottom-right-radius: $radius;
+	-moz-border-radius-bottomright: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+	-o-border-bottom-right-radius: $radius;
+}
+@mixin border-radius-bottom-left($radius:4px) {
+	border-bottom-left-radius: $radius;
+	-moz-border-radius-bottomleft: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	-o-border-bottom-left-radius: $radius;
+}
+@mixin box-shadow($shadow:0 0 1px rgba(0, 0, 0, 0.3)) {
+	box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+}
+@mixin filter-blur($filter) {
+	filter:blur($filter);
+	-webkit-filter: blur($filter);
+	-moz-filter: blur($filter);
+	-o-filter: blur($filter);
+	-ms-filter: blur($filter);
+}
+@mixin transition($transition:all 0.1s ease-in) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+@mixin transitionAll($time:0.1s) {
+	-webkit-transition: all $time ease-in;
+	-moz-transition: all $time ease-in;
+	-o-transition: all $time ease-in;
+	transition: all $time ease-in;
+}
+@mixin translateY($translateY) {
+	-webkit-transform: translateY($translateY);
+	-moz-transform: translateY($translateY);
+	-o-transform: translateY($translateY);
+	-ms-transform: translateY($translateY);
+	transform: translateY($translateY);
+}
+@mixin translateX($translateX) {
+	-webkit-transform: translateX($translateX);
+	-moz-transform: translateX($translateX);
+	-o-transform: translateX($translateX);
+	-ms-transform: translateX($translateX);
+	transform: translateX($translateX);
+}
+@mixin background-cover($align:center) {
+	background-position: center $align;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+@mixin featured-image($align:center) {
+	display: block;
+	min-height: 100px;
+	@include background-cover($align);
+}
+@mixin box-sizing() {
+	box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+@mixin inline-block($align:middle) {
+	display: inline-block;
+	vertical-align: $align;
+}
+@mixin image-auto-width() {
+	max-width: 100%;
+	height: auto;
+}
+@mixin drop-cap($fontSize:75px, $lineHeight:60px) {
+	float: left;
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 3px;
+}
+@mixin drop-cap-p() {
+	p:first-child:first-letter {
+		@include drop-cap();
+	}
+}
+@mixin columns($count:2) {
+	-webkit-column-count: count;
+	-moz-column-count: count;
+	column-count: count;
+}

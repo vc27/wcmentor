@@ -1,0 +1,16 @@
+{
+	"name": "themewp",
+	"version": "6.0.0",
+	"devDependencies": {
+		"foundation-sites": "^6.0.0",
+		"grunt-contrib-concat": "^1.0.0",
+		"grunt-contrib-sass": "^1.0.0",
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-contrib-uglify": "^1.0.0",
+		"grunt-browser-sync": "^2.0.0",
+		"grunt-notify": "^0.4.0"
+	},
+	"dependencies": {
+		"ruby": "^0.6.0"
+	}
+}
