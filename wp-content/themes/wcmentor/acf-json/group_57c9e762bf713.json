@@ -1,0 +1,82 @@
+{
+    "key": "group_57c9e762bf713",
+    "title": "Status",
+    "fields": [
+        {
+            "key": "field_57c9e85e6832a",
+            "label": "Status",
+            "name": "status",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "upcoming": "upcoming",
+                "current": "current",
+                "waiting": "waiting",
+                "on-hold": "on-hold",
+                "issue": "issue",
+                "completed": "completed"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "upcoming",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_57c9e89d292ea",
+            "label": "Status Note",
+            "name": "status_note",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "steps"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1476136841
+}

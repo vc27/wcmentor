@@ -1,0 +1,106 @@
+{
+    "key": "group_57cabfc4e8583",
+    "title": "Notifications",
+    "fields": [
+        {
+            "key": "field_57cb19c979563",
+            "label": "Activate Notifications",
+            "name": "activate_notifications",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
+            "key": "field_57cb189fecfc4",
+            "label": "Activate group notifications",
+            "name": "activate_group_notifications",
+            "type": "true_false",
+            "instructions": "When this is checked all emails added to the \"group email\" option will receive a notification with each comment. ",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57cb19c979563",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_57cabfda4324f",
+            "label": "Additional emails to send to",
+            "name": "additional_emails_to_send_to",
+            "type": "textarea",
+            "instructions": "CSV value. Add additional emails on to the group. This allows you to add a one off email with out needing to update the group settings.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57cb19c979563",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "steps"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1476136833
+}

@@ -1,0 +1,40 @@
+{
+    "key": "group_57c9e5c687cfb",
+    "title": "Activate Steps",
+    "fields": [
+        {
+            "key": "field_57c9e5d6e60c3",
+            "label": "Add the \"Steps\" post-type",
+            "name": "add_the_steps_post-type",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1476136829
+}
